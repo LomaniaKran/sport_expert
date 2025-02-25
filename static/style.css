@@ -1,0 +1,102 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6bbc8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    background-color: #8f1342;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(43, 11, 20, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Стили для чат-контейнера */
+#chat-container {
+    border: 1px solid #140107;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+/* Стили для журнала чата */
+#chat-log {
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: #f3dce2;
+    display: flex; /* Используем flexbox для выравнивания */
+    flex-direction: column; /* Сообщения располагаются в колонку */
+}
+
+#chat-log p {
+    margin: 5px 0;
+    font-size: 18px; /* Увеличенный размер шрифта */
+    line-height: 1.4;
+    text-align: left; /* Выравнивание текста по левому краю */
+    width: 100%; /* Занимают всю ширину контейнера */
+    box-sizing: border-box; /* Учитываем padding и border в ширине */
+    padding: 8px 12px; /* Добавляем отступы */
+    border-radius: 5px; /* Скругляем края */
+}
+
+/* Стили для сообщений пользователя */
+#chat-log p:nth-child(odd) {
+    color: #ffffff; /* цвет для сообщений пользователя */
+    background-color: #af4e73; /* фон для сообщений пользователя */
+    align-self: flex-start; /* Прижимаем к левому краю */
+    max-width: 70%; /* Ограничиваем ширину */
+}
+
+/* Стили для сообщений Ollama */
+#chat-log p:nth-child(even) {
+    color: #ffffff; /* цвет для сообщений Ollama */
+    background-color: #7c0935; /* фон для сообщений Ollama */
+    align-self: flex-start; /* Прижимаем к левому краю */
+    max-width: 70%; /* Ограничиваем ширину */
+}
+
+/* Стили для области ввода */
+#input-area {
+    display: flex;
+    padding: 10px;
+    background-color: #d696ac;
+    border-top: 1px solid #ddd;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ebb7c9;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#send-button {
+    padding: 8px 15px;
+    background-color: #8b264d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#send-button:hover {
+    background-color: #215286;
+}
