@@ -24,7 +24,6 @@
 
   ### 5. Установка и запуск модели Ollama
    Создайте модель Ollama " ollama pull llama3.2 ", " ollama create sport_exp -f ./Modelfile " и
-   " ollama run sport_exp "
 
   ### 6. Запуск Flask-приложения
    том же терминале (с активным виртуальным окружением) запустите Flask-приложение " python app.py "
