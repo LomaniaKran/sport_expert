@@ -23,10 +23,10 @@
    Установите необходимые пакеты из файла " pip install -r requirements.txt "
 
   ### 5. Установка и запуск модели Ollama
-   Создайте модель Ollama " ollama pull llama3.2 ", " ollama create sport_exp -f ./Modelfile " и
+   Создайте модель Ollama " ollama pull llama3.2 " и " ollama create sport_exp -f ./Modelfile "
 
   ### 6. Запуск Flask-приложения
-   том же терминале (с активным виртуальным окружением) запустите Flask-приложение " python app.py "
+   В том же терминале (с активным виртуальным окружением) запустите Flask-приложение " python app.py "
 
   ### 7. Откройте
    Откройте веб-браузер и перейдите по адресу, указанному Flask (http://127.0.0.1:5000/).
