@@ -100,3 +100,52 @@ h1 {
 #send-button:hover {
     background-color: #215286;
 }
+
+#input-area {
+    display: flex;
+    padding: 10px;
+    background-color: #eee;
+    border-top: 1px solid #ddd;
+    position: relative; /*  Чтобы позиционировать #emoji-picker относительно #input-area */
+}
+
+#emoji-button {
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px; /* Отступ от кнопки отправки */
+}
+
+#emoji-picker {
+    position: absolute; /*  Абсолютное позиционирование */
+    bottom: 100%; /*  Размещаем над #input-area */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    display: none; /*  Изначально скрыт */
+    z-index: 10; /*  Чтобы был над другими элементами */
+    text-align: left;
+}
+
+#emoji-picker span {
+    font-size: 20px;
+    cursor: pointer;
+    margin: 2px;
+    padding: 3px;
+    display: inline-block; /* Важно для отступов и фона */
+}
+
+#emoji-picker span:hover {
+    background-color: #eee; /* Подсветка при наведении */
+}
+
+.img {
+    max-width: 150px; /* Ограничиваем максимальную ширину логотипа */
+    height: auto; /* Автоматически определяем высоту для сохранения пропорций */
+    display: block; /* Убираем отступ снизу у блочных элементов */
+    margin: 0 auto 10px;  /* Центрируем логотип и добавляем отступ снизу */
+}
