@@ -28,28 +28,43 @@ emojiPicker.querySelectorAll("span").forEach(emoji => {
     });
 });
 
+sendButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Предотвращаем стандартную отправку формы
+    sendMessage();
+});
 
-function sendMessage() {
+async function sendMessage() {
     const message = userInput.value.trim();
-    if (message) {
-        appendMessage("You: " + message);
-        userInput.value = "";
+    const fileInput = document.getElementById("file-input");
+    const file = fileInput.files[0]; // Получаем выбранный файл
 
-        fetch("/api/chat", {
+    if (!message && !file) {
+        return; // Ничего не отправляем, если нет ни текста, ни файла
+    }
+
+    const formData = new FormData(); // Используем FormData для отправки файлов
+    formData.append("message", message);
+
+    if (file) {
+        formData.append("file", file); // Добавляем файл
+    }
+
+    appendMessage("You: " + message + (file ? ` (File: ${file.name})` : "")); // Добавляем информацию о файле в сообщение
+
+    userInput.value = "";
+    fileInput.value = null; // Очищаем поле выбора файла
+
+    try {
+        const response = await fetch("/api/chat", {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ message: message })
-        })
-        .then(response => response.json())
-        .then(data => {
-            appendMessage("Ollama: " + data.response);
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            appendMessage("Error: Could not get response.");
+            body: formData  // Отправляем FormData
         });
+
+        const data = await response.json();
+        appendMessage("Ollama: " + data.response);
+    } catch (error) {
+        console.error("Error:", error);
+        appendMessage("Error: Could not get response.");
     }
 }
 
