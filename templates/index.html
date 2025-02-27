@@ -6,10 +6,15 @@
 </head>
 <body>
     <div class="container">
-        <img src="/static/logo9.png" alt="Логотип Спортивного Эксперта">
+        <img src="/static/logo9.PNG" alt="Логотип Спортивного Эксперта">
         <h1>СПОРТИВНЫЙ ЭКСПЕРТ</h1>
         <div id="chat-container">
-            <div id="chat-log"></div>
+            <div id="chat-log">
+                <!-- Здесь будет отображаться история сообщений -->
+                {% for message in messages %}
+                    <p><strong>{{ message.role.capitalize() }}:</strong> {{ message.content }}</p>
+                {% endfor %}
+            </div>
             <div id="input-area">
                 <input type="text" id="user-input" placeholder="Type your message...">
                 <input type="file" id="file-input">  <!-- Поле для выбора файла -->
@@ -21,7 +26,6 @@
             </div>
         </div>
     </div>
-
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
