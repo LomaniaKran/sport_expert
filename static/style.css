@@ -1,7 +1,7 @@
 /* Общие стили */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e6bbc8;
+    background-color: #f8f8f8;
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,7 +13,7 @@ body {
 .container {
     width: 80%;
     max-width: 800px;
-    background-color: #8f1342;
+    background-color: #8f264e;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(43, 11, 20, 0.1);
     padding: 20px;
@@ -112,7 +112,7 @@ h1 {
 }
 
 #send-button:hover {
-    background-color: #215286;
+    background-color: #5ab98d;
 }
 
 #input-area {
@@ -157,9 +157,147 @@ h1 {
     background-color: #eee; /* Подсветка при наведении */
 }
 
-.img {
-    max-width: 150px; /* Ограничиваем максимальную ширину логотипа */
-    height: auto; /* Автоматически определяем высоту для сохранения пропорций */
-    display: block; /* Убираем отступ снизу у блочных элементов */
-    margin: 0 auto 10px;  /* Центрируем логотип и добавляем отступ снизу */
+/* Dark theme */
+.dark-theme body {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.dark-theme .container {
+    background-color: #222;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme h1 {
+    color: #fff;
+}
+
+.dark-theme #chat-container {
+    border-color: #555;
+}
+
+.dark-theme #chat-log {
+    background-color: #444;
+    color: #f0f0f0;
+}
+
+.dark-theme #chat-log p {
+    color: #fff;
+}
+
+.dark-theme #chat-log p:nth-child(odd) {
+    background-color: #666;
+}
+
+.dark-theme #chat-log p:nth-child(even) {
+    background-color: #555;
+}
+
+.dark-theme #input-area {
+    background-color: #555;
+    border-color: #666;
+}
+
+.dark-theme #user-input {
+    border-color: #666;
+    color: #fff;
+    background-color: #444;
+}
+
+.dark-theme #send-button {
+    background-color: #777;
+    color: #fff;
+}
+
+.dark-theme #send-button:hover {
+    background-color: #5ab98d;
+}
+
+.dark-theme #emoji-button {
+    background-color: #666;
+    border-color: #777;
+    color: #fff;
+}
+
+.dark-theme #emoji-picker {
+    background-color: #555;
+    border-color: #666;
+    color: #fff;
+}
+
+.dark-theme #file-input {
+    background-color: #666;
+    border-color: #777;
+    color: #fff;
+}
+
+/* Green theme */
+.green-theme body {
+    background-color: #c8e6c9;
+    color: #326935;
+}
+
+.green-theme .container {
+    background-color: #4d9150;
+}
+
+.green-theme h1 {
+    color: #fff;
+}
+
+.green-theme #chat-container {
+    border-color: #81c784;
+}
+
+.green-theme #chat-log {
+    background-color: #a5d6a7;
+}
+
+.green-theme #chat-log p {
+    color: #fff;
+}
+
+.green-theme #chat-log p:nth-child(odd) {
+    background-color: #43a047;
+}
+
+.green-theme  #chat-log p:nth-child(even) {
+    background-color: #2e7d32;
+}
+
+.green-theme #input-area {
+    background-color: #7bbb7e;
+    border-color: #7fbb8a;
+}
+
+.green-theme #user-input {
+    border-color: #81c784;
+    color: #1b5e20;
+}
+
+.green-theme #send-button {
+    background-color: #1b5e20;
+    color: #fff;
+}
+
+.green-theme #send-button:hover {
+    background-color: #2e9c35;
+}
+
+.green-theme #emoji-button {
+    background-color: #8eda92;
+    border-color: #8ad68e;
+    color: #1b5e20;
+}
+
+.green-theme #emoji-picker {
+    background-color: #81c784;
+    border-color: #81c784;
+    color: #1b5e20;
+}
+
+.green-theme #file-input {
+    background-color: #81c784;
+    border-color: #81c784;
+    color: #1b5e20;
 }

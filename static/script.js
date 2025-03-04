@@ -68,3 +68,21 @@ function appendMessage(role, message) {  // Изменено
     chatLog.appendChild(messageElement);
     chatLog.scrollTop = chatLog.scrollHeight;
 }
+
+const themeButtons = document.querySelectorAll("#theme-selector button");
+
+themeButtons.forEach(button => {
+    button.addEventListener("click", function() {
+        const theme = this.dataset.theme;
+        document.body.className = theme + "-theme"; // Применяем класс к <body>
+        localStorage.setItem('theme', theme); // Сохраняем тему в localStorage
+    });
+});
+
+// При загрузке страницы проверяем сохраненную тему в localStorage
+document.addEventListener('DOMContentLoaded', (event) => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.body.className = savedTheme + "-theme";
+    }
+});
