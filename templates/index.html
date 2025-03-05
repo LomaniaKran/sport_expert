@@ -15,14 +15,14 @@
         </div>
         <div id="chat-container">
             <div id="chat-log">
-                <!-- Здесь будет отображаться история сообщений -->
+                <!-- Тут история сообщений -->
                 {% for message in messages %}
                     <p><strong>{{ message.role.capitalize() }}:</strong> {{ message.content }}</p>
                 {% endfor %}
             </div>
             <div id="input-area">
                 <input type="text" id="user-input" placeholder="Type your message...">
-                <input type="file" id="file-input">  <!-- Поле для выбора файла -->
+                <input type="file" id="file-input">  <!-- Файлики ага -->
                 <button id="send-button">Send</button>
                 <button id="emoji-button">😊</button>
                 <div id="emoji-picker">

@@ -1,4 +1,4 @@
-/* Общие стили */
+/* Общее */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f8f8;
@@ -13,7 +13,7 @@ body {
 .container {
     width: 80%;
     max-width: 800px;
-    background-color: #8f264e;
+    background-color: #8f3557;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(43, 11, 20, 0.1);
     padding: 20px;
@@ -39,7 +39,7 @@ h1 {
     margin-bottom: 5px;
 }
 
-/* Стили для чат-контейнера */
+/* Внутри штука */
 #chat-container {
     border: 1px solid #ebb7c9;
     border-radius: 8px;
@@ -47,44 +47,44 @@ h1 {
     margin-bottom: 15px;
 }
 
-/* Стили для журнала чата */
+/* Журнал чата */
 #chat-log {
     height: 300px;
     overflow-y: scroll;
     padding: 10px;
     background-color: #f3dce2;
-    display: flex; /* Используем flexbox для выравнивания */
-    flex-direction: column; /* Сообщения располагаются в колонку */
+    display: flex;
+    flex-direction: column; 
 }
 
 #chat-log p {
     margin: 5px 0;
-    font-size: 18px; /* Увеличенный размер шрифта */
+    font-size: 18px;
     line-height: 1.4;
-    text-align: left; /* Выравнивание текста по левому краю */
-    width: 100%; /* Занимают всю ширину контейнера */
-    box-sizing: border-box; /* Учитываем padding и border в ширине */
-    padding: 8px 12px; /* Добавляем отступы */
-    border-radius: 5px; /* Скругляем края */
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    border-radius: 5px;
 }
 
-/* Стили для сообщений пользователя */
+/* Для челика */
 #chat-log p:nth-child(odd) {
-    color: #ffffff; /* цвет для сообщений пользователя */
-    background-color: #af4e73; /* фон для сообщений пользователя */
-    align-self: flex-start; /* Прижимаем к левому краю */
-    max-width: 70%; /* Ограничиваем ширину */
+    color: #ffffff; 
+    background-color: #9b506d; 
+    align-self: flex-start; 
+    max-width: 70%;
 }
 
-/* Стили для сообщений Ollama */
+/* Для бота */
 #chat-log p:nth-child(even) {
-    color: #ffffff; /* цвет для сообщений Ollama */
-    background-color: #7c0935; /* фон для сообщений Ollama */
-    align-self: flex-start; /* Прижимаем к левому краю */
-    max-width: 70%; /* Ограничиваем ширину */
+    color: #ffffff; 
+    background-color: #701638; 
+    align-self: flex-start;
+    max-width: 70%;
 }
 
-/* Стили для области ввода */
+/* Область ввода */
 #input-area {
     display: flex;
     padding: 10px;
@@ -102,7 +102,7 @@ h1 {
 
 #send-button {
     padding: 8px 15px;
-    background-color: #8b264d;
+    background-color: #7e2a4a;
     color: white;
     border: none;
     border-radius: 4px;
@@ -120,7 +120,7 @@ h1 {
     padding: 10px;
     background-color: #eee;
     border-top: 1px solid #ddd;
-    position: relative; /*  Чтобы позиционировать #emoji-picker относительно #input-area */
+    position: relative;
 }
 
 #emoji-button {
@@ -129,19 +129,19 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 5px; /* Отступ от кнопки отправки */
+    margin-left: 5px;
 }
 
 #emoji-picker {
-    position: absolute; /*  Абсолютное позиционирование */
-    bottom: 100%; /*  Размещаем над #input-area */
+    position: absolute;
+    bottom: 100%; 
     left: 0;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 5px;
-    display: none; /*  Изначально скрыт */
-    z-index: 10; /*  Чтобы был над другими элементами */
+    display: none;
+    z-index: 10;
     text-align: left;
 }
 
@@ -150,14 +150,14 @@ h1 {
     cursor: pointer;
     margin: 2px;
     padding: 3px;
-    display: inline-block; /* Важно для отступов и фона */
+    display: inline-block;
 }
 
 #emoji-picker span:hover {
-    background-color: #eee; /* Подсветка при наведении */
+    background-color: #eee;
 }
 
-/* Dark theme */
+/* Тёмная тема */
 .dark-theme body {
     background-color: #333;
     color: #f0f0f0;
@@ -231,14 +231,14 @@ h1 {
     color: #fff;
 }
 
-/* Green theme */
+/* Зелёни */
 .green-theme body {
     background-color: #c8e6c9;
-    color: #326935;
+    color: #203a21;
 }
 
 .green-theme .container {
-    background-color: #4d9150;
+    background-color: #5a815b;
 }
 
 .green-theme h1 {
@@ -246,11 +246,11 @@ h1 {
 }
 
 .green-theme #chat-container {
-    border-color: #81c784;
+    border-color: #84b886;
 }
 
 .green-theme #chat-log {
-    background-color: #a5d6a7;
+    background-color: #9fc5a0;
 }
 
 .green-theme #chat-log p {
@@ -258,21 +258,21 @@ h1 {
 }
 
 .green-theme #chat-log p:nth-child(odd) {
-    background-color: #43a047;
+    background-color: #49924d;
 }
 
 .green-theme  #chat-log p:nth-child(even) {
-    background-color: #2e7d32;
+    background-color: #275a2a;
 }
 
 .green-theme #input-area {
-    background-color: #7bbb7e;
-    border-color: #7fbb8a;
+    background-color: #77aa79;
+    border-color: #a2daad;
 }
 
 .green-theme #user-input {
-    border-color: #81c784;
-    color: #1b5e20;
+    border-color: #9bdb9e;
+    color: #061107;
 }
 
 .green-theme #send-button {
@@ -285,19 +285,19 @@ h1 {
 }
 
 .green-theme #emoji-button {
-    background-color: #8eda92;
-    border-color: #8ad68e;
-    color: #1b5e20;
+    background-color: #69a56c;
+    border-color: #385f3b;
+    color: #194d1c;
 }
 
 .green-theme #emoji-picker {
-    background-color: #81c784;
-    border-color: #81c784;
+    background-color: #d6e4d7;
+    border-color: #8cca8f;
     color: #1b5e20;
 }
 
 .green-theme #file-input {
-    background-color: #81c784;
-    border-color: #81c784;
-    color: #1b5e20;
+    background-color: #49704b;
+    border-color: #49704b;
+    color: #eef3ef;
 }
